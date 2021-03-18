@@ -1,0 +1,10 @@
+{
+    "verbose": true,
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "ts-node ./src/index.ts",
+    "env": {
+        "PORT": "5000",
+        "NODE_ENV": "development"
+    }
+}

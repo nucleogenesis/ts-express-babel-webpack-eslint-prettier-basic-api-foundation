@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["DOM", "ES2020"],
+    "allowJs": false,
+    "checkJs": false,
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist-tsc",
+    "rootDir": "./src",
+    "composite": true,
+    "tsBuildInfoFile": "./tsBuildInfoFile.json",
+    "noEmit": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+
+    "moduleResolution": "node",
+    "baseUrl": "./node_modules",
+    "paths": {
+        "*": [
+            "./",
+            "./@types/",
+            "../src/types/"
+        ]
+    },
+    "typeRoots": ["./src/types/"],
+    "types": [
+        "node",
+        "express",
+        "body-parser",
+        "helmet",
+        "compression",
+        "winston",
+        "mysql"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+    "allowUmdGlobalAccess": true,
+    "forceConsistentCasingInFileNames": true,
+      "pretty": true,
+      "traceResolution": true
+  },
+    "include": [
+        "./src/express.ts",
+        "./src/server.ts",
+        "./src/**/*.ts",
+        "./src/**/**/*.ts",
+        "./src/**/**/**/*.ts"
+    ],
+    "exclude": [
+        "./node_modules"      ,
+        "./src/index.ts"
+    ]
+}
