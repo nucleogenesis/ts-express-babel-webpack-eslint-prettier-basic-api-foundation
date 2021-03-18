@@ -18,7 +18,8 @@ module.exports = function (api) {
         ],
         plugins: [
             "@babel/plugin-transform-modules-commonjs",
-            "@babel/plugin-transform-runtime"
+            "@babel/plugin-transform-runtime",
+            //"@babel/preset-typescript"
         ]
     }
 }

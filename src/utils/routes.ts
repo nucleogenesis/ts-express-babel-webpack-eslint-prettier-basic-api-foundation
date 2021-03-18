@@ -1,11 +1,15 @@
-import * as express from "express";
+import * as $e from "express";
 import { getStatusText, OK } from "http-status-codes";
 
-export function routes (): express.Router {
-    const api: express.Router = express.Router();
+export function routes (): $e.Router {
+    const api: $e.Router = $e.Router();
 
-    api.get("/", (req: express.Request, res: express.Response) => {
+    api.get("/", (req: $e.Request, res: $e.Response) => {
         return res.status(OK).send({success: true, message: getStatusText(OK)});
+    });
+
+    api.get("/smokeTest", (req: $e.Request, res: $e.Response) => {
+      return res.status(OK).send({success: true, message: "Smoke test"});
     });
 
     return api;
